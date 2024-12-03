@@ -1,0 +1,299 @@
+@font-face {
+  font-family: "myfont";
+  src: url(./acardfont/acard.ttf);
+}
+
+/* Basic CSS Boilerplate */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: #151515;
+  color: #fff;
+  font-size: 16px;
+  font-family: "roboto";
+  /* cursor: none; */
+}
+
+/* cursor */
+#cursor {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  position: fixed;
+  border-radius: 50%;
+  z-index: 99999;
+}
+
+/* loader */
+#loader {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: black;
+  z-index: 999999;
+  font-family: "myfont";
+}
+
+.loader__title {
+  /* background-color: blue; */
+  padding: 5vw 10vw;
+}
+
+.loader__title h1 {
+  /* background-color: red; */
+  margin-top: 1.5vw;
+  font-size: 3.5rem;
+  font-weight: 200;
+}
+
+.loader__title p {
+  margin-bottom: 3vw;
+  font-size: 1.5rem;
+}
+
+/* main */
+#main {
+  position: relative;
+  height: auto;
+  /* display: none; */
+}
+
+#page1 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+nav {
+  /* background-color: blue; */
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 2rem;
+  font-size: 1.2rem;
+}
+
+.nav__logo {
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  gap: 3vw;
+}
+
+.nav__menu ul {
+  display: flex;
+  justify-content: space-around;
+  /* background-color: black; */
+  padding: 0 2rem;
+  gap: 3rem;
+}
+
+.nav__menu ul li {
+  list-style: none;
+}
+
+.hero__text {
+  /* background-color: blue; */
+  font-size: 3rem;
+  text-transform: uppercase;
+  width: 80%;
+  margin: 0 auto;
+  padding-left: 15rem;
+  padding-top: 7rem;
+
+  line-height: 0.99;
+  letter-spacing: 0.2rem;
+}
+
+#page2 {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  /* background-color: blue; */
+  padding: 1px;
+}
+
+.video__container {
+  /* background-color: pink; */
+  width: 70%;
+  height: 80%;
+  margin-top: 3vw;
+  margin-left: 30vw;
+  position: relative;
+}
+
+.video__container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video__container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.pause {
+  display: none;
+}
+
+.video__play {
+  width: 100px;
+  height: 100px;
+  background-color: orangered;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999999;
+}
+
+.video__play img {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#page3 {
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding: 0 5vw;
+}
+
+#page3 > h1 {
+  padding: 2vw;
+  font-size: 2.5rem;
+  padding: 3.5vw 0;
+  text-transform: uppercase;
+}
+
+.page3__images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.imagebox {
+  /* background-color: green; */
+  height: 500px;
+  width: 410px;
+  margin-bottom: 10vw;
+}
+.imagebox:nth-child(even) {
+  margin-top: 7vw;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.page3__footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+}
+
+.page3__footer p {
+  font-size: 1.3rem;
+}
+
+.outer__circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 3px solid rgb(182, 180, 180);
+
+  position: relative;
+}
+
+.inner__circle {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 50%;
+  scale: 0;
+  transition: scale 0.5s ease-in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.outer__circle:hover .inner__circle {
+  transform-origin: center;
+  scale: 1;
+}
+.outer__circle svg {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.inner__circle p {
+  color: black;
+  font-size: 1.2rem;
+}
+.rotate {
+  transform: rotate(-45deg);
+  transform-origin: center;
+}
+.protate {
+  transform: rotate(45deg);
+  transform-origin: center;
+}
+.arrow1 {
+  margin-top: 30vw;
+  margin-left: 8vw;
+}
+.arrow2 {
+  margin-top: -13vw;
+  /* margin-left: 5vw; */
+}
+
+#page5 {
+  width: 100%;
+  height: 100vh;
+}
