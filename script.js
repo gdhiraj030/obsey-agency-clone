@@ -48,7 +48,7 @@ function videoPlayAnimation() {
   videoContainer.addEventListener("mouseenter", () => {
     videoContainer.addEventListener("mousemove", (e) => {
       gsap.to(".video__play", {
-        x: e.clientX - 600,
+        x: e.clientX - 900,
         y: e.clientY - 300,
       });
     });
