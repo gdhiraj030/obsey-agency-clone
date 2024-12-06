@@ -149,7 +149,7 @@ function timer() {
 timer();
 // goey effect
 function gooeyEffect() {
-  Shery.imageEffect(".image", {
+  Shery.imageEffect(".images", {
     style: 6,
     // debug: true,
     gooey: true,
